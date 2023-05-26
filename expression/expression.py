@@ -2,7 +2,7 @@
 
 class Expression:
     def __init__(self):
-        self.equation = ''
+        self.equation = '0'
 
     def append(self, char):
         self.equation += char

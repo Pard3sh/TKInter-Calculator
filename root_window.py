@@ -11,10 +11,5 @@ class RootWindow:
         self.window.iconphoto(False, photo)
         self.window.config(bg='#121212')
 
-
     def update_window(self):
         self.window.mainloop()
-
-    def get_window_object(self):
-        return self.window
-
