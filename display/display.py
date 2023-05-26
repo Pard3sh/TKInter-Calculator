@@ -1,8 +1,7 @@
 import tkinter as tk
-from ..window.window import Window
 
 
-class Display(Window):
+class Display:
     def __init__(self, root):
-        super(Display, self).__init__(root=root)
-        self.window.geometry(str(root.winfo_width()) + "x" + str(int(root.winfo_height() * .2)))
+        self.frame = tk.Frame(root, height=221, bg="white")
+        self.frame.pack(expand=True, fill="both")
