@@ -7,3 +7,4 @@ class Window:
 
     def update_window(self):
         self.window.mainloop()
+

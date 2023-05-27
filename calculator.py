@@ -2,8 +2,6 @@ from buttons.buttons import create_buttons
 from buttons.buttonsframe import create_button_frame
 from display.display import Display
 from expression.expression import Expression
-from labels.expression_label import ExpressionLabel
-from labels.output import OutputLabel
 from root_window import RootWindow
 
 
