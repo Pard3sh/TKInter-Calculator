@@ -1,15 +1,9 @@
-import tkinter as tk
+from labels.label import Label
 
 
-class ExpressionLabel:
+class ExpressionLabel(Label):
     def __init__(self, root):
-        self.equation = tk.StringVar()
-        self.equation.set("")
+        font = ("Arial", 40, "bold")
+        super().__init__(root, font)
 
-        self.label = tk.Label(root.frame, textvariable=self.equation, anchor=tk.E, bg="#F5F5F5",
-                              fg="#25265E", padx=24, font=("Arial", 40, "bold"))
-        self.label.pack(expand=True, fill="both")
-
-    def update(self, update):
-        self.equation.set(update)
 
