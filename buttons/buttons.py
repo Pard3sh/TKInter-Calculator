@@ -15,7 +15,8 @@ def clear_button(root, equation):
 
 
 def equal_button(root, equation):
-    button = tk.Button(root, text="=", bg="#CCEDFF", fg="#25265E", font=("Arial", 20), borderwidth=0)
+    button = tk.Button(root, text="=", bg="#CCEDFF", fg="#25265E",
+                       font=("Arial", 20), borderwidth=0, command=lambda: equation.calculate())
     button.grid(row=4, column=3, sticky=tk.NSEW, columnspan=2)
 
 
@@ -23,7 +24,8 @@ def operator_buttons(root, equation):
     i = 0
     operations = {"/": "\u00F7", "*": "\u00D7", "-": "-", "+": "+"}
     for operator, symbol in operations.items():
-        button = tk.Button(root, text=symbol, bg="#F8FAFF", fg="#25265E", font=("Arial", 20), borderwidth=0)
+        button = tk.Button(root, text=symbol, bg="#F8FAFF", fg="#25265E",
+                           font=("Arial", 20), borderwidth=0, command=lambda val=symbol: equation.append(str(val)))
         button.grid(row=i, column=4, sticky=tk.NSEW)
         i += 1
 

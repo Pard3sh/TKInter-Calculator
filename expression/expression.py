@@ -13,7 +13,6 @@ class Expression:
         self.equation += char
         self.expression_label.update(self.get_equation())
 
-
     def remove(self):
         self.equation = self.equation[:len(self.equation) - 1]
 
@@ -26,8 +25,11 @@ class Expression:
         return self.equation
 
     def calculate(self):
+        # "/": "\u00F7", "*": "\u00D7"
+        self.equation = self.equation.replace("\u00F7", "/")
+        self.equation = self.equation.replace("\u00D7", "*")
         try:
             value = str(eval(self.equation))
-            return True, value
+            self.output_label.update(value)
         except:
-            return False, self.equation
+            self.output_label.update("error")
