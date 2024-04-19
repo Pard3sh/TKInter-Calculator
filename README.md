@@ -8,4 +8,3 @@ Created basic calculator to learn tkinter library and to work on OOP.
 # in the project directory
 python3 calculator.py
 ```
-
