@@ -1,6 +1,6 @@
 # TKInter-Calculator
 
-Created basic calculator to learn tkinter library and to work on OOP. 
+Created basic calculator to learn tkinter library 
 
 ## How to run:
 
